@@ -15,6 +15,7 @@ const Rooms = ({auth}) => {
     const fetchRooms = async () => {
         try {
             const response = await axios.get(`https://chat-1-vftl.onrender.com/rooms`);
+            console.log('fdf');
             console.log(response);
             setRooms(response.data.rooms);
         } catch (error) {
