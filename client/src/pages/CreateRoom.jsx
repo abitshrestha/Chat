@@ -22,7 +22,7 @@ const CreateRoom = () => {
             'username':auth.username,
         }
         try {
-            const response = await axios.post(`http://localhost:4000/rooms`, room);
+            const response = await axios.post(`https://chat-1-vftl.onrender.com/rooms`, room);
             navigate(`/rooms/${roomId}`);
             console.log(response);
         } catch (error) {

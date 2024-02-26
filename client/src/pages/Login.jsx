@@ -13,7 +13,7 @@ const LoginForm = () => {
         }
         e.preventDefault();
         try {
-            const response=await axios.post(`http://localhost:4000/login`,signupDetails);
+            const response=await axios.post(`https://chat-1-vftl.onrender.com/login`,signupDetails);
             localStorage.setItem('auth',JSON.stringify(response.data.user));
             console.log(response);
         } catch (error) {

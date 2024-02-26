@@ -14,7 +14,7 @@ const Rooms = ({auth}) => {
 
     const fetchRooms = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/rooms`);
+            const response = await axios.get(`https://chat-1-vftl.onrender.com/rooms`);
             setRooms(response.data.rooms);
         } catch (error) {
             console.log(error);
@@ -23,7 +23,7 @@ const Rooms = ({auth}) => {
 
     const handleJoinRoom = async (roomId) => {
         try {
-            const response=await axios.put(`http://localhost:4000/rooms/${roomId}`,{userId:auth.userId});
+            const response=await axios.put(`https://chat-1-vftl.onrender.com/rooms/${roomId}`,{userId:auth.userId});
             navigate(`/rooms/${roomId}`);
             console.log(response);
         } catch (error) {

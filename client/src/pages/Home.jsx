@@ -8,7 +8,7 @@ const Home = () => {
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
     const { auth } = useAuth();
-    const socketInstance = useRef(io(`http://localhost:4000`));
+    const socketInstance = useRef(io(`https://chat-1-vftl.onrender.com`));
     const messagesEndRef = useRef(null);
 
     const sendMessage = (e) => {

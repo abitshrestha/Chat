@@ -15,7 +15,7 @@ const SignupPage = () => {
         }
         e.preventDefault();
         try {
-            const response=await axios.post(`http://localhost:4000/signup`,signupDetails);
+            const response=await axios.post(`https://chat-1-vftl.onrender.com/signup`,signupDetails);
             console.log(response);
         } catch (error) {
             console.log(error);
