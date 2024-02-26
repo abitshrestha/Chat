@@ -20,7 +20,7 @@ const server = app.listen(port, () => {
 });
 const io = new Server(server, {
     cors: {
-        origin: "*",
+        origin: "https://chat-weld-six.vercel.app/",
     }
 });
 io.on('connection', (socket) => {
