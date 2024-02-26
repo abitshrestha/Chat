@@ -9,6 +9,7 @@ const app = express();
 const port = process.env.PORT;
 connectDB();
 app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 app.use('/', authRouter);
 app.use('/', roomRouter);
